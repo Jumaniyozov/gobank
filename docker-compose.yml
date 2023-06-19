@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+
+  postgres:
+    image: 'postgres:15.3'
+    ports:
+      - "5433:5432"
+    restart: always
+    deploy:
+      mode: replicated
+      replicas: 1
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: bank
+    volumes:
+      - ./db-data/postgres/:/var/lib/postgresql/data/
