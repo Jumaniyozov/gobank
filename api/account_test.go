@@ -5,8 +5,6 @@ import (
 	"database/sql"
 	"encoding/json"
 	"fmt"
-	"github.com/golang/mock/gomock"
-	"github.com/stretchr/testify/require"
 	mockdb "gobank/db/mock"
 	db "gobank/db/sqlc"
 	"gobank/util"
@@ -14,6 +12,9 @@ import (
 	"net/http"
 	"net/http/httptest"
 	"testing"
+
+	"github.com/golang/mock/gomock"
+	"github.com/stretchr/testify/require"
 )
 
 func TestGetAccountAPI(t *testing.T) {

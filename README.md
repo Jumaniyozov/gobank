@@ -1,5 +1,6 @@
 ### DB migration 
 
+```migrate create -ext sql -dir db/migration -seq add_users```
 
 ### DB mock  
 
